@@ -535,11 +535,11 @@
       margin-right: 8px;
     }
 
-    /* Memories Section Styles */
+    /* Small Memories Gallery Styles */
     .memories-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
       margin-top: 30px;
     }
 
@@ -551,16 +551,16 @@
       transition: all 0.3s ease;
       box-shadow: 0 10px 25px rgba(255, 64, 129, 0.2);
       border: 2px solid rgba(255, 64, 129, 0.1);
-      aspect-ratio: 1;
+      height: 120px;
       background: linear-gradient(135deg, rgba(255, 64, 129, 0.1) 0%, rgba(244, 67, 54, 0.1) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 60px;
+      font-size: 40px;
     }
 
     .memory-card:hover {
-      transform: translateY(-8px) scale(1.02);
+      transform: translateY(-8px) scale(1.05);
       box-shadow: 0 15px 35px rgba(255, 64, 129, 0.3);
     }
 
@@ -572,7 +572,7 @@
     }
 
     .memory-card:hover .memory-image {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
 
     .memory-caption {
@@ -582,11 +582,12 @@
       right: 0;
       background: linear-gradient(to top, rgba(216, 27, 96, 0.9), transparent);
       color: white;
-      padding: 15px;
+      padding: 10px;
       transform: translateY(100%);
       transition: transform 0.3s ease;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 12px;
+      text-align: center;
     }
 
     .memory-card:hover .memory-caption {
@@ -720,8 +721,13 @@
       }
 
       .memories-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 12px;
+      }
+
+      .memory-card {
+        height: 100px;
+        font-size: 32px;
       }
 
       .nav-tabs {
@@ -952,35 +958,35 @@
     <div class="container">
       <h2>📸 Our Beautiful Memories 📸</h2>
       <p class="subtitle">Every moment with you is a memory I treasure forever</p>
-
-       <div class="memories-gallery">
+      
+      <div class="memories-gallery">
         <div class="memory-card" onclick="openMemory(event)">
-          <div style="font-size: 80px;">🌅</div>
+          <div style="font-size: 40px;">🌅</div>
           <div class="memory-caption">Our First Sunset</div>
         </div>
-         
+
         <div class="memory-card" onclick="openMemory(event)">
-          <div style="font-size: 80px;">🍽️</div>
+          <div style="font-size: 40px;">🍽️</div>
           <div class="memory-caption">Our Favorite Dinner</div>
         </div>
 
         <div class="memory-card" onclick="openMemory(event)">
-          <div style="font-size: 80px;">🎒</div>
+          <div style="font-size: 40px;">🎒</div>
           <div class="memory-caption">Adventure Day</div>
         </div>
 
         <div class="memory-card" onclick="openMemory(event)">
-          <div style="font-size: 80px;">🎉</div>
+          <div style="font-size: 40px;">🎉</div>
           <div class="memory-caption">Celebration Moment</div>
         </div>
 
         <div class="memory-card" onclick="openMemory(event)">
-          <div style="font-size: 80px;">🌙</div>
+          <div style="font-size: 40px;">🌙</div>
           <div class="memory-caption">Late Night Talks</div>
         </div>
 
         <div class="memory-card" onclick="openMemory(event)">
-          <div style="font-size: 80px;">💑</div>
+          <div style="font-size: 40px;">💑</div>
           <div class="memory-caption">Just Us Two</div>
         </div>
       </div>
@@ -1154,11 +1160,11 @@
       // Find and activate the clicked button
       const allButtons = document.querySelectorAll('.nav-button');
       allButtons.forEach(btn => {
-        if (btn.textContent.includes(['Home', 'Flowers', 'Songs', 'Memories'].find(text => btn.textContent.includes(text)))) {
+        if (btn.textContent.includes(['Home', 'Flowers', 'Songs', 'Celestial'].find(text => btn.textContent.includes(text)))) {
           if ((sectionId === 'home' && btn.textContent.includes('Home')) ||
               (sectionId === 'flowers' && btn.textContent.includes('Flowers')) ||
               (sectionId === 'songs' && btn.textContent.includes('Songs')) ||
-              (sectionId === 'memories' && btn.textContent.includes('Memories'))) {
+              (sectionId === 'memories' && btn.textContent.includes('Celestial'))) {
             btn.classList.add('active');
           }
         }
