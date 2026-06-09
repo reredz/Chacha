@@ -1003,8 +1003,8 @@
     let isAudioPlaying = false;
     const audioPlayer = document.getElementById('audioPlayer');
 
-    // "This Town" by Niall Horan - using a streaming service URL
-    const SONG_URL = 'https://stream-server.com/this-town-niall-horan.mp3';
+    // "This Town" by Niall Horan - using GitHub raw content URL
+    const SONG_URL = 'https://raw.githubusercontent.com/reredz/Chacha/main/Niall%20Horan%20-%20This%20Town%20(Official%20Lyric%20Video).mp3';
 
     const playfulMessages = [
       "Mali mali baby  ",
@@ -1069,7 +1069,7 @@
         audioPlayer.src = SONG_URL;
         audioPlayer.play().catch(err => {
           console.log('Could not play audio:', err);
-          alert('Could not play "This Town" by Niall Horan. The song file may need to be loaded from a different source. Try using a direct MP3 link!');
+          alert('Could not play "This Town" by Niall Horan. Please check that the MP3 file exists in the repository.');
         });
         musicPlayer.classList.add('playing');
         isAudioPlaying = true;
