@@ -795,7 +795,7 @@
   <div id="passwordScreen">
     <div class="password-container">
       <h2 class="password-title">⚠️ This is for your eyes only ⚠️</h2>
-      <p class="password-subtitle">Manghula ka muna bago mo pindutin yung hint </p>
+      <p class="password-subtitle">Try to guess bago mo pindutin yung hint </p>
       
       <div class="password-input-group">
         <input 
@@ -858,10 +858,10 @@
       <div id="clickCounter"></div>
 <div id="secretMessage" class="secret-message">
   <div class="secret-card">
-    💌 One more reason...<br><br>
+     One more reason...<br><br>
     Because you're you.<br><br>
-    Out of everyone I could have met, every path I could have taken, I'm grateful it led me to you. ❤️
-    <br><br>Thank you for staying.
+    Out of everyone I could have met, every path I could have taken, I'm grateful it led me to you. 
+    <br><br>Thank you for giving me a chance.
   </div>
 </div>
 
@@ -953,7 +953,7 @@
   <div id="songs" class="section">
     <div class="container">
       <h2>🎵 Songs That Remind Me of You 🎵</h2>
-      <p class="subtitle">These songs capture the feelings I have for you</p>
+      <p class="subtitle">These songs capture the feelings I have for you.</p>
       
       <div class="songs-container">
         <div class="song-card">
@@ -1020,11 +1020,11 @@
     // "This Town" by Niall Horan - using GitHub raw content URL
     const SONG_URL = 'https://raw.githubusercontent.com/reredz/Chacha/main/Niall%20Horan%20-%20This%20Town%20(Official%20Lyric%20Video).mp3';
 
-    // PHOTO GALLERY DATA - UPDATE THIS WITH YOUR PHOTOS
+    // PHOTO GALLERY DATA - 
     const photos = [
       {
         src: '911cae49-f4bd-45d6-b949-7e5eff86f733.jfif',
-        caption: 'SOBRANG GANDA NAMAN NG BABY KO NA YANNNN'
+        caption: 'SOBRANG GANDA NAMAN NG BABY KO NA YAN'
       },
       {
         src: '381350d7-f209-41cb-b5e9-99f39ea1ac3b.jfif',
@@ -1175,7 +1175,7 @@
       
       if (currentHintLevel >= hints.length) {
         hintButton.disabled = true;
-        hintButton.textContent = 'No more hints 😅';
+        hintButton.textContent = 'No more hints';
       }
     }
 
@@ -1299,7 +1299,7 @@
     }
 
     function createConfetti(event) {
-      const confettiPieces = ['❤️', '😘', '😍', '💕', '💖', '💜', '🏵️', '😚', '💙', '💘', '✨', '🌹'];
+      const confettiPieces = ['❤️', '😘', '😍', '💕', '💖', '🧡', '💛', '💚', '🥰', '🙈', '🤎', '🤍', '💗', '💞', '💓', '❤️‍🔥', '❤️‍🩹', '🖤', '💜', '😚', '💙', '💘', '✨', '🌹'];
       const rect = event.target.getBoundingClientRect();
       
       for (let i = 0; i < 15; i++) {
